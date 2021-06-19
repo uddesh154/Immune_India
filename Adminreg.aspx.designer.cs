@@ -11,7 +11,7 @@ namespace WebApplication7
 {
 
 
-    public partial class Adminlogin
+    public partial class Adminreg
     {
 
         /// <summary>
@@ -42,13 +42,13 @@ namespace WebApplication7
         protected global::System.Web.UI.WebControls.TextBox UserId;
 
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// Errormsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator Errormsg;
 
         /// <summary>
         /// lblpassword control.
@@ -60,12 +60,21 @@ namespace WebApplication7
         protected global::System.Web.UI.WebControls.Label lblpassword;
 
         /// <summary>
-        /// login control.
+        /// pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button login;
+        protected global::System.Web.UI.WebControls.TextBox pass;
+
+        /// <summary>
+        /// registration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button registration;
     }
 }

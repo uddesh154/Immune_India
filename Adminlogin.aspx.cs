@@ -13,5 +13,10 @@ namespace WebApplication7
         {
 
         }
+
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
+
+        }
     }
 }

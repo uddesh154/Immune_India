@@ -110,6 +110,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Adminlogin.aspx" />
+    <Content Include="Adminreg.aspx" />
     <Content Include="childlogin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -177,6 +178,13 @@
     </Compile>
     <Compile Include="Adminlogin.aspx.designer.cs">
       <DependentUpon>Adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminreg.aspx.cs">
+      <DependentUpon>Adminreg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminreg.aspx.designer.cs">
+      <DependentUpon>Adminreg.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
