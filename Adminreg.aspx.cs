@@ -20,9 +20,9 @@ namespace WebApplication7
 
         protected void UserId_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=.\;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True;");
+            SqlConnection con = new SqlConnection(@"Data Source=.\LAPTOP-B10KEF4P\SQLEXPRESS01;Database=immune;Integrated Security=True;User Instance=True;");
             con.Open();
-            SqlCommand cmd = new SqlCommand("select*from regform where username='" + UserId.Text + "'", con);
+            SqlCommand cmd = new SqlCommand("select*from Admin where username='" + UserId.Text + "'", con);
             SqlDataReader dr = cmd.ExecuteReader();
 
             if (dr.Read())
@@ -42,7 +42,7 @@ namespace WebApplication7
            
                 SqlConnection con = new SqlConnection(@"Data Source=.\;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True;User Instance=True;");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into regform values(@a,@b,@c,@d)", con);
+                SqlCommand cmd = new SqlCommand("insert into Admin values(@a,@b)", con);
                 cmd.Parameters.AddWithValue("a", UserId.Text);
                 cmd.Parameters.AddWithValue("b", pass.Text);
                 cmd.ExecuteNonQuery();
