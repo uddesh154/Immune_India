@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="childlogin.aspx.cs" Inherits="WebApplication7.childlogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Hospitallogin.aspx.cs" Inherits="WebApplication7.childlogin" %>
 
 <!DOCTYPE html>
 

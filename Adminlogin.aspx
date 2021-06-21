@@ -54,7 +54,7 @@
             <td class="auto-style7">
                 &nbsp;</td>
             <td class="auto-style7">
-                <asp:Button ID="login" runat="server" Text="Login" />
+                <asp:Button ID="login" runat="server" Text="Login" OnClick="login_Click" />
             </td>
            
         </tr>

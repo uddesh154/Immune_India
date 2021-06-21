@@ -13,5 +13,15 @@ namespace WebApplication7
         {
 
         }
+
+        protected void addadmin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Adminreg.aspx");
+        }
+
+        protected void addhospital_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Hospitalreg.aspx");
+        }
     }
 }

@@ -111,7 +111,7 @@
     <Content Include="About.aspx" />
     <Content Include="Adminlogin.aspx" />
     <Content Include="Adminreg.aspx" />
-    <Content Include="childlogin.aspx" />
+    <Content Include="Hospitallogin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -135,6 +135,7 @@
       <DependentUpon>Dockerfile</DependentUpon>
     </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Hospitalreg.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -168,7 +169,7 @@
     <Content Include="vaccination1.jpeg" />
     <Content Include="vaccination2.jpeg" />
     <Content Include="vaccination3.jpeg" />
-    <Content Include="Vaccinatorlogin.aspx" />
+    <Content Include="Adminhome.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -198,12 +199,12 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="childlogin.aspx.cs">
-      <DependentUpon>childlogin.aspx</DependentUpon>
+    <Compile Include="Hospitallogin.aspx.cs">
+      <DependentUpon>Hospitallogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="childlogin.aspx.designer.cs">
-      <DependentUpon>childlogin.aspx</DependentUpon>
+    <Compile Include="Hospitallogin.aspx.designer.cs">
+      <DependentUpon>Hospitallogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -221,6 +222,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hospitalreg.aspx.cs">
+      <DependentUpon>Hospitalreg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hospitalreg.aspx.designer.cs">
+      <DependentUpon>Hospitalreg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -244,12 +252,12 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Vaccinatorlogin.aspx.cs">
-      <DependentUpon>Vaccinatorlogin.aspx</DependentUpon>
+    <Compile Include="Adminhome.aspx.cs">
+      <DependentUpon>Adminhome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vaccinatorlogin.aspx.designer.cs">
-      <DependentUpon>Vaccinatorlogin.aspx</DependentUpon>
+    <Compile Include="Adminhome.aspx.designer.cs">
+      <DependentUpon>Adminhome.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
