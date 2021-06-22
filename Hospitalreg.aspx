@@ -6,13 +6,10 @@
 <head runat="server">  
     <title></title>  
     <style type="text/css">
-        .auto-style1 {
-            height: 29px;
-        }
         .auto-style2 {
             height: 463px;
-            width: 617px;
-            margin-left: 377px;
+            width: 649px;
+            margin-left: 519px;
             margin-top: 107px;
         }
         .auto-style3 {
@@ -22,38 +19,53 @@
         .auto-style4 {
             width: 323px;
         }
+        table{
+           font-family:serif;
+           font-size:large;
+
+        }
+        .auto-style6 {
+            width: 182px;
+        }
     </style>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>  
 <body>  
-     <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand"><b style="font-family: Serif; font-size: x-large; font-weight: bold; top: 10px; left: 10px">Immune India</b></a>
-    <a href="Adminhome.aspx" class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 150px">Back</a>
-    <a href="Default.aspx" class="btn btn-outline-success my-2 my-sm-0" type="submit"  style="margin-left: 350px">LogOut</a>
-         
+   <nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand"><b style="font-family: Serif; font-size: x-large; font-weight: bold; margin-left:50px;">Immune India</b></a>
+              <a href="Adminhome.aspx" class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 1000px">Back</a>
+    <a href="Default.aspx" class="btn btn-outline-success my-2 my-sm-0" type="submit"  style="margin-right: 50px">LogOut</a>
 </nav>
+    <div class="auto-style17" style="font-family: serif; font-size: xx-large; font-weight: bold; text-decoration: blink; background-color: #FFFFFF; color: #000000;" >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hospital Registration  <i class="fas fa-hospital"></i>
+</div>
     <form id="form1" runat="server">  
         <div>  
             <table class="auto-style2">  
                 <tr>  
-                    <td class="auto-style1">Name :</td>  
+                    <td class="auto-style6" >Name :
+                        </td>
                     <td class="auto-style3">  
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>  
                     </td>  
   
                </tr>  
                 <tr>  
-                    <td>Password</td>  
+                    <td class="auto-style6">Password</td>  
                      <td class="auto-style4"> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>  
                 </tr>  
                 <tr>  
-                    <td>Confirm Password</td>  
+                    <td class="auto-style6">Confirm Password</td>  
                     <td class="auto-style4">  
                         <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>  
                     </td>  
                 </tr>  
                 <tr>  
-                    <td>Location</td>  
+                    <td class="auto-style6">Location</td>  
                     <td class="auto-style4">  
                         <asp:DropDownList ID="DropDownList1" runat="server">  
                             <asp:ListItem Text="Select City" Value="select" Selected="True"></asp:ListItem>  
@@ -63,24 +75,17 @@
                         </asp:DropDownList>  
                     </td>  
                 </tr>  
+                
                 <tr>  
-                    <td>Gender</td>  
-                    <td class="auto-style4">  
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server">  
-                            <asp:ListItem>Male</asp:ListItem>  
-                            <asp:ListItem>Female</asp:ListItem>  
-                        </asp:RadioButtonList>  
-                    </td>  
-               </tr>  
-                <tr>  
-                    <td>Gmail</td>  
+                    <td class="auto-style6">Email-Id</td>  
                     <td class="auto-style4">  
                         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>  
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter valid Email" ForeColor="Red" ControlToValidate="TextBox4" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     </td>  
                 </tr>  
                 <tr>  
-                    <td>  
-                        <asp:Button ID="Button1" runat="server" Text="Register" />  
+                    <td class="auto-style6">  
+                        <asp:Button ID="Button1" runat="server" Text="Register" CssClass="auto-style21" Height="48px" Width="153px" BackColor="#33CC33" BorderStyle="Solid" BorderColor="#999999" style="margin-left: 43px"/>  
                     </td>  
                 </tr>  
             </table>  

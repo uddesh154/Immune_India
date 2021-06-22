@@ -26,6 +26,9 @@
         .auto-style5 {
             width: 4px;
         }
+        a{
+            color:#000000;
+        }
     </style>
 </head>
 <body>
@@ -35,20 +38,19 @@
     <a href="Default.aspx" class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-right:50px" >LogOut</a>
 </nav>
     <form id="form1" runat="server">
-        <div>
-        </div>
+        
 
        
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style4"><b style="font-family: serif; font-size: xx-large; font-weight: bold; background-color: #000000; color: #FFFFFF;">&nbsp; Add New Admin&nbsp;&nbsp; <br />
+                    <td class="auto-style4"><b style="font-family: serif; font-size: xx-large; font-weight: bold; background-color: #000000; color: #FFFFFF;">&nbsp; Register Kid&nbsp;&nbsp; <br />
                         </b><br /><br />
-                        <a href="Adminreg.aspx"><i class="fas fa-user-plus fa-9x icon" style="height: 46px; width: 71px; margin-left: 64px" ></i></a>
+                        <a href="newkid.aspx"><i class="fas fa-baby fa-9x" style="height: 46px; width: 71px; margin-left: 64px" ></i></a>
                     </td>
                     <td class="auto-style5">&nbsp;</td>
-                    <td class="auto-style3"><b style="font-family: serif; font-size: xx-large; font-weight: bold; background-color: #000000; color: #FFFFFF;">&nbsp;&nbsp; Add&nbsp; Hospital&nbsp;&nbsp; &nbsp; <br />
+                    <td class="auto-style3"><b style="font-family: serif; font-size: xx-large; font-weight: bold; background-color: #000000; color: #FFFFFF;">&nbsp; Vaccinate Kid &nbsp; <br />
                         </b><br /><br />
-                        <a href="Hospitalreg.aspx"><i class="fas fa-hospital-user fa-9x icon" style="height: 46px; width: 72px; margin-left: 67px" ></i></a>
+                        <a href="vaccinate.aspx"><i class="fas fa-eye-dropper fa-9x" style="height: 46px; width: 72px; margin-left: 67px" ></i></a>
                     </td>
                 </tr>
                
