@@ -76,7 +76,7 @@ font-weight:bold;
 <body>
       <nav class="navbar navbar-dark bg-dark">
   <a class="navbar-brand"><b style="font-family: Serif; font-size: x-large; font-weight: bold; margin-left:50px;">Immune India</b></a>
-          <a href="Default.aspx" class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-left: 150px">Back</a>
+          <a href="Default.aspx" class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-right: 95px">Back</a>
   
 </nav>
 <form id="form2" runat="server">

@@ -129,6 +129,15 @@
                     </td>  
   
                </tr> 
+         <tr>
+                <td class="auto-style22">Mobile
+                </td>
+                <td class="auto-style22">
+                    <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3" ErrorMessage="Invalid Mobile no" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
+                </td>
+
+            </tr>
         <tr>
             <td class="auto-style23">Address
             </td>
