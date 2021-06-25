@@ -137,6 +137,8 @@
     </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Hospitalreg.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="index.html" />
     <Content Include="Login.aspx" />
     <Content Include="newkid.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -240,6 +242,13 @@
     </Compile>
     <Compile Include="Hospitalreg.aspx.designer.cs">
       <DependentUpon>Hospitalreg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

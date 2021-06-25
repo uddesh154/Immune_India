@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     
-
+    
 
     <p>
         <img alt="" longdesc="https://localhost:44330/vaccination1.jpeg" src="vaccination1.jpeg" style="width: 1186px; height: 619px; margin-left: 3px; margin-top: 39px" draggable="auto" property="og:image" role="slider" />
@@ -25,3 +25,5 @@
 
 
 </asp:Content>
+
+
