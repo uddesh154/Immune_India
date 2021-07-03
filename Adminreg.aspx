@@ -89,7 +89,7 @@ font-weight:bold;
 <td class="auto-style13" draggable="true" style="background-color: #000000">
 &nbsp;<br />
     <asp:TextBox ID="UserId" runat="server" Height="32px" Width="234px"></asp:TextBox>
-<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BackColor="White" ControlToValidate="UserId" CssClass="auto-style3" ErrorMessage="Please enter valid ID" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+<asp:RegularExpressionValidator ID="Errormsg" runat="server" BackColor="White" ControlToValidate="UserId" CssClass="auto-style3" ErrorMessage="Please enter valid ID" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
 </td>
 </tr>
 <tr>
@@ -107,6 +107,9 @@ font-weight:bold;
     </td>
 <td class="auto-style22">
 <asp:Button ID="register" runat="server" Text="Register" OnClick="login_Click" CssClass="auto-style21" Height="48px" Width="153px" BackColor="#33CC33" BorderStyle="Solid" BorderColor="#999999" />
+    <br />
+    <br />
+    <asp:Label ID="Errorlabel" runat="server"></asp:Label>
 </td>
 
 </tr>

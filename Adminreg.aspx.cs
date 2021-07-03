@@ -16,18 +16,7 @@ namespace WebApplication7
 
         protected void Page_Load(object sender, EventArgs e)
         {
-             if (IsPostBack)
-            {
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-                conn.Open();
-                string checkuser = "select * from Admin where ID='" + UserId.Text + "'";
-                SqlCommand cmd = new SqlCommand(checkuser, conn);
-                cmd.ExecuteScalar();
-                
-
-
-                conn.Close();
-        }
+          
 
     }
 
@@ -43,23 +32,37 @@ namespace WebApplication7
 
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 conn.Open();
-                string insertQuery = "insert into Admin(ID,password)values (@ID,@Password)";
-                SqlCommand cmd = new SqlCommand(insertQuery, conn);
-                cmd.Parameters.AddWithValue("@ID", UserId.Text);
-                cmd.Parameters.AddWithValue("@Password", TextBox1.Text);
+                string checkuser = "select * from Admin where ID='" + UserId.Text + "'";
+                SqlCommand cmd = new SqlCommand(checkuser, conn);
+                SqlDataReader rd = cmd.ExecuteReader();
+                if (rd.HasRows)
+                {
+                    Errorlabel.Text = "Already Registered";
+                    conn.Close();
+                }
+                else
+                {
+                    SqlConnection conn1 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                    conn1.Open();
+                    string insertQuery = "insert into Admin(ID,password)values (@ID,@Password)";
+                    SqlCommand cmd1 = new SqlCommand(insertQuery, conn1);
+                    cmd1.Parameters.AddWithValue("@ID", UserId.Text);
+                    cmd1.Parameters.AddWithValue("@Password", TextBox1.Text);
 
 
-                cmd.ExecuteNonQuery();
+                    cmd1.ExecuteNonQuery();
 
-                Response.Write("Admin registeration Successfully!!!thank you");
+                    Errorlabel.Text="Admin registeration Successfully!!!thank you";
 
-                conn.Close();
+                    conn1.Close();
+                }
 
             }
             catch (Exception ex)
             {
                 Response.Write("error" + ex.ToString());
             }
+        
 
         }
     }

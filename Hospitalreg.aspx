@@ -56,22 +56,17 @@
                </tr>  
                 <tr>  
                     <td class="auto-style6">Password</td>  
-                     <td class="auto-style4"> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>  
+                     <td class="auto-style4"> <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox></td>  
                 </tr>  
-                <tr>  
-                    <td class="auto-style6">Confirm Password</td>  
-                    <td class="auto-style4">  
-                        <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>  
-                    </td>  
-                </tr>  
+                
                 <tr>  
                     <td class="auto-style6">Location</td>  
                     <td class="auto-style4">  
                         <asp:DropDownList ID="DropDownList1" runat="server">  
                             <asp:ListItem Text="Select City" Value="select" Selected="True"></asp:ListItem>  
                             <asp:ListItem Text="Bangalore" Value="Bangalore"></asp:ListItem>  
-                            <asp:ListItem Text="Mysore" Value="Mysore"></asp:ListItem>  
-                            <asp:ListItem Text="Hubli" Value="hubli"></asp:ListItem>  
+                            <asp:ListItem Text="Pune" Value="Pune"></asp:ListItem>  
+                            <asp:ListItem Text="Mumbai" Value="Mumbai"></asp:ListItem>  
                         </asp:DropDownList>  
                     </td>  
                 </tr>  
@@ -85,8 +80,13 @@
                 </tr>  
                 <tr>  
                     <td class="auto-style6">  
-                        <asp:Button ID="Button1" runat="server" Text="Register" CssClass="auto-style21" Height="48px" Width="153px" BackColor="#33CC33" BorderStyle="Solid" BorderColor="#999999" style="margin-left: 43px"/>  
+                        <asp:Button ID="Button1" runat="server" Text="Register" CssClass="auto-style21" Height="48px" Width="153px" BackColor="#33CC33" BorderStyle="Solid" BorderColor="#999999" style="margin-left: 43px" OnClick="Button1_Click"/>  
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [name], [password], [location], [emailID] FROM [Hospital]"></asp:SqlDataSource>
+                        
                     </td>  
+                    <td>
+                        <asp:Label ID="Errorlabel" runat="server" BackColor="White" BorderColor="White" ForeColor="#CC0000"></asp:Label>
+                    </td>
                 </tr>  
             </table>  
         </div>  

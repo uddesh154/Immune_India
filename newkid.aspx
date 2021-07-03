@@ -36,10 +36,6 @@
         .auto-style23 {
             height: 180px;
         }
-        .auto-style24 {
-            width: 294px;
-            height: 112px;
-        }
         .auto-style25 {
             height: 73px;
         }
@@ -134,7 +130,7 @@
                 </td>
                 <td class="auto-style22">
                     <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3" ErrorMessage="Invalid Mobile no" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox9" ErrorMessage="Invalid Mobile no" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
                 </td>
 
             </tr>
@@ -143,7 +139,10 @@
             </td>
                <td class="auto-style23">
 
-                   <textarea id="TextArea1" class="auto-style24" name="S1"></textarea></td>
+                   
+                   <asp:TextBox ID="TextBox10" runat="server" Height="122px" Width="281px"></asp:TextBox>
+
+                   
         </tr>
         <tr>
            <td class="auto-style25" >Password
@@ -153,7 +152,10 @@
                     </td> 
         </tr>
         <tr>
-<td class="auto-style19"></td>
+<td class="auto-style19">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [ID], [firstname], [middlename], [lastname], [mothername], [date1], [time1], [gender], [parentemail], [mobile], [address], [password] FROM [Kid]"></asp:SqlDataSource>
+            <asp:Label ID="Errorlabel" runat="server" ForeColor="#CC0000"></asp:Label>
+            </td>
 <td class="auto-style22">
 <asp:Button ID="register" runat="server" Text="Register" OnClick="login_Click" CssClass="auto-style21" Height="48px" Width="153px" BackColor="#33CC33" BorderStyle="Solid" BorderColor="#999999" />
 </td>

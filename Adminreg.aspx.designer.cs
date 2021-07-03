@@ -33,13 +33,13 @@ namespace WebApplication7
         protected global::System.Web.UI.WebControls.TextBox UserId;
 
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// Errormsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator Errormsg;
 
         /// <summary>
         /// TextBox1 control.
@@ -67,5 +67,14 @@ namespace WebApplication7
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button register;
+
+        /// <summary>
+        /// Errorlabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Errorlabel;
     }
 }
