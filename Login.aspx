@@ -8,9 +8,6 @@
 body{
 
 }
-.auto-style3 {
-height: 49px;
-}
 .auto-style6 {
 height: 69px;
 margin-left:50px;
@@ -19,11 +16,6 @@ font-family:Georgia, 'Times New Roman', Times, serif;
 font-size:x-large;
 font-weight:bold;
 
-}
-.auto-style11 {
-width: 242px;
-height: 29px;
-margin-top: 0px;
 }
 .auto-style12 {
 height: 76px;
@@ -79,24 +71,27 @@ width: 228px;
 <table style="margin-top:200px; background-color: #FFFFFF; border-spacing: 0px;" class="auto-style18">
 <tr>
 <td class="auto-style12" style="background-color: #000000; font-family: serif; color: #FFFFFF;">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Parent Email&nbsp;</td>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID&nbsp;</td>
 <td class="auto-style13" draggable="true" style="background-color: #000000">
 &nbsp;<asp:TextBox ID="UserId" runat="server" Height="32px" Width="234px"></asp:TextBox>
-<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BackColor="White" ControlToValidate="UserId" CssClass="auto-style3" ErrorMessage="Please enter valid ID" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
 </td>
 </tr>
 <tr>
 <td class="auto-style6" style="background-color: #000000; color: #FFFFFF; font-family: serif;">
     &nbsp;&nbsp;&nbsp;&nbsp; Password&nbsp;</td>
 <td class="auto-style14" style="background-color: #000000">
-&nbsp;<input id="Password1" class="auto-style11" type="password" /></td>
+&nbsp;    <asp:TextBox ID="Password" runat="server" Height="32px" Width="234px" TextMode="Password"></asp:TextBox>
+    </td>
 
 </tr>
 
 <tr>
-<td class="auto-style19"></td>
+<td class="auto-style19">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [KidRecords]"></asp:SqlDataSource>
+    </td>
 <td class="auto-style22">
-    <asp:Button ID="parentlogin" runat="server" BackColor="#00CC00" CssClass="auto-style23" Height="50px" Text="Login" Width="87px" />
+    <asp:Button ID="parentlogin" runat="server" BackColor="#00CC00" CssClass="auto-style23" Height="50px" Text="Login" Width="87px" OnClick="parentlogin_Click" />
+    <asp:Label ID="Errorlabel" runat="server" ForeColor="#CC0000"></asp:Label>
 </td>
 
 </tr>

@@ -20,11 +20,6 @@ font-size:x-large;
 font-weight:bold;
 
 }
-.auto-style11 {
-width: 242px;
-height: 29px;
-margin-top: 0px;
-}
 .auto-style12 {
 height: 76px;
 width: 223px;
@@ -96,14 +91,18 @@ font-weight:bold;
 <td class="auto-style6" style="background-color: #000000; color: #FFFFFF; font-family: serif;">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Password&nbsp;</td>
 <td class="auto-style14" style="background-color: #000000">
-&nbsp;<input id="Password1" class="auto-style11" type="password" /></td>
+ &nbsp;   <asp:TextBox ID="Password" runat="server" Height="32px" Width="234px" TextMode="Password"></asp:TextBox>
+    </td>
 
 </tr>
 
 <tr>
-<td class="auto-style19"></td>
+<td class="auto-style19">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [password], [emailID], [location], [name] FROM [Hospital]"></asp:SqlDataSource>
+    </td>
 <td class="auto-style22">
 <asp:Button ID="login" runat="server" Text="LogIn" OnClick="login_Click" CssClass="auto-style21" Height="48px" Width="153px" BackColor="#33CC33" BorderStyle="Solid" BorderColor="#999999" OnClientClick="login" />
+    <asp:Label ID="Errorlabel" runat="server" ForeColor="#CC0000"></asp:Label>
 </td>
 
 </tr>

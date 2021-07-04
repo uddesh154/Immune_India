@@ -20,11 +20,6 @@ font-size:x-large;
 font-weight:bold;
 
 }
-.auto-style11 {
-width: 242px;
-height: 29px;
-margin-top: 0px;
-}
 .auto-style12 {
 height: 76px;
 width: 178px;
@@ -66,7 +61,7 @@ font-weight:bold;
                 height: 96px;
                 width: 473px;
             }
-        </style>
+            </style>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
@@ -96,14 +91,18 @@ font-weight:bold;
 <td class="auto-style6" style="background-color: #000000; color: #FFFFFF; font-family: serif;">
     &nbsp;&nbsp;&nbsp;&nbsp; Password&nbsp;</td>
 <td class="auto-style14" style="background-color: #000000">
-&nbsp;<input id="Password1" class="auto-style11" type="password" /></td>
+&nbsp;<asp:TextBox ID="Password" runat="server" Height="32px" Width="234px" TextMode="Password"></asp:TextBox>
+    </td>
 
 </tr>
 
 <tr>
-<td class="auto-style19"></td>
+<td class="auto-style19">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [ID], [password] FROM [Admin]"></asp:SqlDataSource>
+    </td>
 <td class="auto-style22">
 <asp:Button ID="login" runat="server" Text="LogIn" OnClick="login_Click" CssClass="auto-style21" Height="48px" Width="153px" BackColor="#33CC33" BorderStyle="Solid" BorderColor="#999999" />
+    <asp:Label ID="Errorlabel" runat="server" ForeColor="#CC0000"></asp:Label>
 </td>
 
 </tr>
