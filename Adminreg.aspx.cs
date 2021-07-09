@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -52,8 +54,6 @@ namespace WebApplication7
 
                     cmd1.ExecuteNonQuery();
 
-                    Errorlabel.Text="Admin registeration Successfully!!!thank you";
-
                     conn1.Close();
                 }
 
@@ -62,7 +62,34 @@ namespace WebApplication7
             {
                 Response.Write("error" + ex.ToString());
             }
-        
+            string email = UserId.Text;
+            string to = email; //To address    
+            string from = "siddhisuryawanshi2000@gmail.com"; //From address    
+            MailMessage message = new MailMessage(from, to);
+
+            string mailbody = "Congratulations!!"+UserId.Text+"<br> Your ID = "+UserId.Text+"<br> Password = "+TextBox1.Text;
+            message.Subject = "Congratulations!!!!";
+            message.Body = mailbody;
+            message.BodyEncoding = Encoding.UTF8;
+            message.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
+            System.Net.NetworkCredential basicCredential1 = new
+            System.Net.NetworkCredential("siddhisuryawanshi2000@gmail.com", "siddhivinayak");
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            client.Credentials = basicCredential1;
+            Response.Write("Mail Sent");
+            try
+            {
+                client.Send(message);
+                Errorlabel.Text = "Admin registeration Successfully!!!thank you";
+            }
+
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
+
 
         }
     }

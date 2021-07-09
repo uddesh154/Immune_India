@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -54,6 +56,33 @@ namespace WebApplication7
             catch (Exception ex)
             {
                 Response.Write("error" + ex.ToString());
+            }
+            string email = TextBox4.Text;
+            string to = email; //To address    
+            string from = "siddhisuryawanshi2000@gmail.com"; //From address    
+            MailMessage message = new MailMessage(from, to);
+
+            string mailbody = "Congratulations!!<br> Hospital is successfully registered on Immune India Platform" + TextBox1.Text + "<br> Your ID = " + email + "<br> Password = " + TextBox2.Text;
+            message.Subject = "Congratulations!!!!";
+            message.Body = mailbody;
+            message.BodyEncoding = Encoding.UTF8;
+            message.IsBodyHtml = true;
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Gmail smtp    
+            System.Net.NetworkCredential basicCredential1 = new
+            System.Net.NetworkCredential("siddhisuryawanshi2000@gmail.com", "siddhivinayak");
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            client.Credentials = basicCredential1;
+            Response.Write("Mail Sent");
+            try
+            {
+                client.Send(message);
+                Errorlabel.Text = "Hospital registeration Successfully!!!thank you";
+            }
+
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
             }
         }
 
