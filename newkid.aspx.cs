@@ -33,6 +33,8 @@ namespace WebApplication7
             string mobile = TextBox9.Text;
             string address = TextBox10.Text;
             string password = TextBox8.Text;
+            string gend;
+            string visit = "https://localhost:44330/Login";
 
             SqlConnection conn1 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             conn1.Open();
@@ -74,11 +76,20 @@ namespace WebApplication7
                 Response.Write("error" + ex.ToString());
             }
             
+            if(gender.Equals("male"))
+            {
+                gend = "Boy";
+            }
+            else
+            {
+                gend = "Girl";
+            }
             string to = parentemail; //To address    
             string from = "siddhisuryawanshi2000@gmail.com"; //From address    
             MailMessage message = new MailMessage(from, to);
 
-            string mailbody = "Congratulations!!<br> Baby" + TextBox1.Text + "<br> Your ID = " + email + "<br> Password = " + TextBox2.Text;
+            string mailbody = "<b>Congratulations!!<b><br> You are blessed with a baby "+ gend +"<br>Your login credentials - <br>ID = " + ID + "<br> Password = " + password
+                +"<br> To know your kid's vaccination schedule <a href="+ visit +">click here</a>";
             message.Subject = "Congratulations!!!!";
             message.Body = mailbody;
             message.BodyEncoding = Encoding.UTF8;
@@ -93,7 +104,7 @@ namespace WebApplication7
             try
             {
                 client.Send(message);
-                Errorlabel.Text = "Hospital registeration Successfully!!!thank you";
+                Errorlabel.Text = "Kid registeration Successfully!!!  Thank you";
             }
 
             catch (Exception ex)
