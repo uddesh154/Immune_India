@@ -43,7 +43,7 @@ namespace WebApplication7
             SqlDataReader rd = cmd.ExecuteReader();
             if (rd.HasRows)
             {
-                int id =Int64(rd.GetString(1));
+                int id =Int64(rd.GetString(0));
                 while (id == ID)
                 {
                     ID = random.Next(10000000);

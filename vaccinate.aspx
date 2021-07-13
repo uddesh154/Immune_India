@@ -60,7 +60,7 @@
                 </td>
                 <td class="auto-style1">
                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Please Enter valid email" ForeColor="Red" ValidationExpression="http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Please Enter valid email" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </td>
 
             </tr>
@@ -82,12 +82,22 @@
                         <asp:ListItem Text="Booster" Value="Booster"></asp:ListItem>
                         <asp:ListItem Text="TT" Value="TT"></asp:ListItem>
                         <asp:ListItem Text="Rota virus" Value="Rota virus"></asp:ListItem>
-                        <asp:ListItem Text="Polio" Value="Polio"></asp:ListItem>
+                        <asp:ListItem Text="polio" Value="Polio"></asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
+              <tr>
+                <td class="auto-style2">Date
+                </td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="TextBox4" runat="server" TextMode="Date"></asp:TextBox>
+                </td>
+
+            </tr>
             <tr>
-                <td class="auto-style3"></td>
+                <td class="auto-style3">
+                    <asp:Label ID="Errorlabel" runat="server"></asp:Label>
+                </td>
                 <td class="auto-style3">
                     <asp:Button ID="Button1" runat="server" BackColor="#00CC00" BorderColor="#00CC00" BorderStyle="Solid" CssClass="auto-style4" OnClick="Button1_Click" Text="OK" />
                 </td>
