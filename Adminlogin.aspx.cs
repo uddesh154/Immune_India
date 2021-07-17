@@ -49,6 +49,9 @@ namespace WebApplication7
 
                     }
                     
+                }else
+                {
+                    Errorlabel.Text = "you are not Registered Admin";
                 }
                
                 conn1.Close();

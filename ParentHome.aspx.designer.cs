@@ -60,6 +60,24 @@ namespace WebApplication7
         protected global::System.Web.UI.WebControls.Label hepatatis;
 
         /// <summary>
+        /// Booster control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Booster;
+
+        /// <summary>
+        /// TT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TT;
+
+        /// <summary>
         /// influe control.
         /// </summary>
         /// <remarks>

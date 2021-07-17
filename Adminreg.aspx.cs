@@ -29,6 +29,7 @@ namespace WebApplication7
 
         protected void login_Click(object sender, EventArgs e)
         {
+            string visit = "https://localhost:44330/Adminlogin";
             try
             {
 
@@ -67,7 +68,9 @@ namespace WebApplication7
             string from = "siddhisuryawanshi2000@gmail.com"; //From address    
             MailMessage message = new MailMessage(from, to);
 
-            string mailbody = "Congratulations!!"+UserId.Text+"<br> Your ID = "+UserId.Text+"<br> Password = "+TextBox1.Text;
+            string mailbody = "Congratulations!! <br> You are now registered admin for Immune India <br> Your ID = "+UserId.Text+"<br> Password = "+TextBox1.Text+"<br>" +
+                "In order to login <a href=" + visit + ">click here</a>"
+                ;
             message.Subject = "Congratulations!!!!";
             message.Body = mailbody;
             message.BodyEncoding = Encoding.UTF8;

@@ -40,7 +40,7 @@ namespace WebApplication7
                 SqlDataReader rd = cmd.ExecuteReader();
                 if (rd.HasRows)
                 {
-                    Errorlabel.Text = "Already Registered";
+                    Errorlabel.Text = "This kid has Already taken this vaccine";
                     conn.Close();
                 }
                 else
@@ -68,7 +68,7 @@ namespace WebApplication7
                 string from = "siddhisuryawanshi2000@gmail.com"; //From address    
                 MailMessage message = new MailMessage(from, to);
 
-                string mailbody = "Congratulations!!<br> ";
+                string mailbody = "Congratulations!!<br> You have been successfully vaccinated with "+vaccine+" Vaccine on : "+date;
                 message.Subject = "Congratulations!!!!";
                 message.Body = mailbody;
                 message.BodyEncoding = Encoding.UTF8;

@@ -20,6 +20,7 @@ namespace WebApplication7
         {
             string userid = UserId.Text;
             string password = Password.Text;
+            Session["id"] = userid;
             try
             {
                 SqlConnection conn1 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);

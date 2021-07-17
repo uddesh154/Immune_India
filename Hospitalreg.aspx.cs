@@ -62,7 +62,7 @@ namespace WebApplication7
             string from = "siddhisuryawanshi2000@gmail.com"; //From address    
             MailMessage message = new MailMessage(from, to);
 
-            string mailbody = "Congratulations!!<br> Hospital is successfully registered on Immune India Platform" + TextBox1.Text + "<br> Your ID = " + email + "<br> Password = " + TextBox2.Text;
+            string mailbody = "Congratulations!!<br> Hospital is successfully registered on Immune India Platform <br> Your ID = " + email + "<br> Password = " + TextBox2.Text;
             message.Subject = "Congratulations!!!!";
             message.Body = mailbody;
             message.BodyEncoding = Encoding.UTF8;

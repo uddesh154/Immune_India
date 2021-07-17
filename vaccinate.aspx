@@ -81,8 +81,10 @@
                         <asp:ListItem Text="BCG" Value="BCG"></asp:ListItem>
                         <asp:ListItem Text="Booster" Value="Booster"></asp:ListItem>
                         <asp:ListItem Text="TT" Value="TT"></asp:ListItem>
-                        <asp:ListItem Text="Rota virus" Value="Rota virus"></asp:ListItem>
+                        <asp:ListItem Text="Rota_virus" Value="Rota_virus"></asp:ListItem>
                         <asp:ListItem Text="polio" Value="Polio"></asp:ListItem>
+                        <asp:ListItem Text="Hepatatis_A" Value="Hepatatis_A"></asp:ListItem>
+                        <asp:ListItem Text="Influanzae" Value="Influanzae"></asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
