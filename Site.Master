@@ -64,7 +64,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p  font-family: serif; font-size: medium;">For grievances & feedback : &#9993; <a href="mailto:uddeshbhingarde@gmail.com"> uddeshbhingarde@gmail.com </a><br>
+                <p  font-family: serif; font-size: medium;">For grievances & feedback : &#9993; <a href="mailto:siddhisuryawanshi2000@gmail.com"> siddhisuryawanshi2000@gmail.com </a><br>
                 &copy; <%: DateTime.Now.Year %> Immune India</p>
             </footer>
         </div>

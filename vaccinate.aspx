@@ -98,10 +98,12 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:Label ID="Errorlabel" runat="server"></asp:Label>
+                    <asp:Label ID="Errorlabel" runat="server" ForeColor="Red"></asp:Label>
                 </td>
                 <td class="auto-style3">
                     <asp:Button ID="Button1" runat="server" BackColor="#00CC00" BorderColor="#00CC00" BorderStyle="Solid" CssClass="auto-style4" OnClick="Button1_Click" Text="OK" />
+                &nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="done1" runat="server" ForeColor="#006600"></asp:Label>
                 </td>
             </tr>
         </table>
