@@ -69,6 +69,7 @@ namespace WebApplication7
                     }
                     else
                     {
+                        Errorlabel.Text = " ";
                         SqlConnection conn1 = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                         conn1.Open();
                         string insertQuery = "insert into " + vaccine + " values ('" + ID + "','" + mail + "','" + mobile + "','" + date + "')";
@@ -81,15 +82,17 @@ namespace WebApplication7
                     }
                 }
 
-
+                
                 catch (Exception ex)
                 {
                     Response.Write("error" + ex.ToString());
                 }
             }
             if(done==1)
-            { 
-                string to = mail; //To address    
+            {
+                try
+                {
+                    string to = mail; //To address    
                 string from = "siddhisuryawanshi2000@gmail.com"; //From address    
                 MailMessage message = new MailMessage(from, to);
 
@@ -105,10 +108,9 @@ namespace WebApplication7
                 client.UseDefaultCredentials = false;
                 client.Credentials = basicCredential1;
                 Response.Write("Mail Sent");
-                try
-                {
+                
                     client.Send(message);
-                    Errorlabel.Text = "Vaccination Successful!!!thank you";
+                    
                 }
 
                 catch (Exception ex)
