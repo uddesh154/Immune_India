@@ -23,11 +23,13 @@ namespace WebApplication7
                 SqlDataReader rd = cmd.ExecuteReader();
                 if (rd.HasRows)
                 {
+                    BCG.ForeColor = System.Drawing.Color.Green;
                     BCG.Text = "Completed";
                    
                 }
                 else
                 {
+                    BCG.ForeColor = System.Drawing.Color.Red;
                     BCG.Text = "Incomplete";
                 }
             }
@@ -45,11 +47,13 @@ namespace WebApplication7
                 SqlDataReader rd1 = cmd1.ExecuteReader();
                 if (rd1.HasRows)
                 {
+                    Polio.ForeColor = System.Drawing.Color.Green;
                     Polio.Text = "Completed";
                     
                 }
                 else
                 {
+                    Polio.ForeColor = System.Drawing.Color.Red;
                     Polio.Text = "Incomplete";
                 }
                 conn1.Close();
@@ -66,11 +70,13 @@ namespace WebApplication7
                 SqlDataReader rd2 = cmd2.ExecuteReader();
                 if (rd2.HasRows)
                 {
+                    Rotavirus.ForeColor = System.Drawing.Color.Green;
                     Rotavirus.Text = "Completed";
                     
                 }
                 else
                 {
+                    Rotavirus.ForeColor = System.Drawing.Color.Red;
                     Rotavirus.Text = "Incomplete";
                 }
                 conn2.Close();
@@ -89,11 +95,13 @@ namespace WebApplication7
                 SqlDataReader rd3 = cmd3.ExecuteReader();
                 if (rd3.HasRows)
                 {
+                    hepatatis.ForeColor = System.Drawing.Color.Green;
                     hepatatis.Text = "Completed";
 
                 }
                 else
                 {
+                    hepatatis.ForeColor = System.Drawing.Color.Red;
                     hepatatis.Text = "Incomplete";
                 }
                 conn3.Close();
@@ -111,11 +119,13 @@ namespace WebApplication7
                 SqlDataReader rd4 = cmd4.ExecuteReader();
                 if (rd4.HasRows)
                 {
+                    Booster.ForeColor = System.Drawing.Color.Green;
                     Booster.Text = "Completed";
 
                 }
                 else
                 {
+                    Booster.ForeColor = System.Drawing.Color.Red;
                     Booster.Text = "Incomplete";
                 }
                 conn4.Close();
@@ -133,11 +143,13 @@ namespace WebApplication7
                 SqlDataReader rd5 = cmd5.ExecuteReader();
                 if (rd5.HasRows)
                 {
+                    TT.ForeColor = System.Drawing.Color.Green;
                     TT.Text = "Completed";
 
                 }
                 else
                 {
+                    TT.ForeColor = System.Drawing.Color.Red;
                     TT.Text = "Incomplete";
                 }
                 conn5.Close();
@@ -154,11 +166,13 @@ namespace WebApplication7
                 SqlDataReader rd6 = cmd6.ExecuteReader();
                 if (rd6.HasRows)
                 {
+                    influe.ForeColor = System.Drawing.Color.Green;
                     influe.Text = "Completed";
                     
                 }
                 else
                 {
+                    influe.ForeColor = System.Drawing.Color.Red;
                     influe.Text = "Incomplete";
                 }
                 conn6.Close();
