@@ -29,6 +29,9 @@
             width: 51%;
             margin-top: 60px;
         }
+        .auto-style6 {
+            margin-left: 64px;
+        }
     </style>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -52,56 +55,55 @@
                 </td>
                 <td class="auto-style1">
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:Button ID="Button2" runat="server" BackColor="#00CC00" CssClass="auto-style6" Height="31px" OnClick="Button2_Click" Text="Verify" Width="85px" />
+                    <asp:Label ID="Errorlabel" runat="server" ForeColor="Red"></asp:Label>
                 </td>
 
             </tr>
             <tr>
-                <td class="auto-style1">Parent Email
+                <td class="auto-style1">
+                    <asp:Label ID="Label1" runat="server" Text="Parent email" Visible="False"></asp:Label>
                 </td>
                 <td class="auto-style1">
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" Visible="False"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Please Enter valid email" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </td>
 
             </tr>
             <tr>
-                <td class="auto-style2">Mobile
+                <td class="auto-style2">
+                    <asp:Label ID="Label2" runat="server" Text="Mobile" Visible="False"></asp:Label>
                 </td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" runat="server" Visible="False"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox3" ErrorMessage="Invalid Mobile no" ForeColor="Red" ValidationExpression="\d{10}"></asp:RegularExpressionValidator>
                 </td>
 
             </tr>
             <tr>
-                <td class="auto-style1">Vaccine</td>
                 <td class="auto-style1">
-                    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-                        <asp:ListItem Text="Select Vaccine" Value="select" Selected="True"></asp:ListItem>
-                        <asp:ListItem Text="BCG" Value="BCG"></asp:ListItem>
-                        <asp:ListItem Text="Booster" Value="Booster"></asp:ListItem>
-                        <asp:ListItem Text="TT" Value="TT"></asp:ListItem>
-                        <asp:ListItem Text="Rota_virus" Value="Rota_virus"></asp:ListItem>
-                        <asp:ListItem Text="polio" Value="Polio"></asp:ListItem>
-                        <asp:ListItem Text="Hepatatis_A" Value="Hepatatis_A"></asp:ListItem>
-                        <asp:ListItem Text="Influanzae" Value="Influanzae"></asp:ListItem>
+                    <asp:Label ID="Label3" runat="server" Text="Vaccine" Visible="False"></asp:Label>
+                </td>
+                <td class="auto-style1">
+                    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Visible="False">
+                 
                     </asp:DropDownList>
                 </td>
             </tr>
               <tr>
-                <td class="auto-style2">Date
+                <td class="auto-style2">
+                    <asp:Label ID="Label4" runat="server" Text="Date" Visible="False"></asp:Label>
                 </td>
                 <td class="auto-style2">
-                    <asp:TextBox ID="TextBox4" runat="server" TextMode="Date"></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" TextMode="Date" Visible="False"></asp:TextBox>
                 </td>
 
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:Label ID="Errorlabel" runat="server" ForeColor="Red"></asp:Label>
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style3">
-                    <asp:Button ID="Button1" runat="server" BackColor="#00CC00" BorderColor="#00CC00" BorderStyle="Solid" CssClass="auto-style4" OnClick="Button1_Click" Text="OK" />
+                    <asp:Button ID="Button1" runat="server" BackColor="#00CC00" BorderColor="#00CC00" BorderStyle="Solid" CssClass="auto-style4" OnClick="Button1_Click" Text="OK" Visible="False" />
                 &nbsp;&nbsp;&nbsp;
                     <asp:Label ID="done1" runat="server" ForeColor="#006600"></asp:Label>
                 </td>
